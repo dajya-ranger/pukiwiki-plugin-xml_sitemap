@@ -19,18 +19,18 @@
 // SEO対応プラグインファイル読み込み
 include_once(PLUGIN_DIR . 'seo.inc.php');
 
-// サイトマップ出力ファイル名
+// XMLサイトマップ出力ファイル名
 define('PLUGIN_SITEMAP_FILE', 'sitemap.xml');
-// サイトマップ対象ページ名（正規表現）指定
+// XMLサイトマップ対象ページ名（正規表現）指定
 // ※対象ページ名を指定する場合は指定ページ名のみが出力対象になるので注意
 define('PLUGIN_SITEMAP_PAGE_ALLOW', '');
-// サイトマップ除外ページ名（正規表現）指定
+// XMLサイトマップ除外ページ名（正規表現）指定
 define('PLUGIN_SITEMAP_PAGE_DISALLOW', '^(PukiWiki\/.*)$');
-// サイトマッププライオリティ初期値：ルート
+// XMLサイトマッププライオリティ初期値：ルート
 define('PLUGIN_SITEMAP_PLUGIN_PRIORITY_ROOT', '1.0');
-// サイトマッププライオリティ初期値：コンテンツページ
+// XMLサイトマッププライオリティ初期値：コンテンツページ
 define('PLUGIN_SITEMAP_PLUGIN_PRIORITY_CONTENT', '0.8');
-// サイトマッププライオリティ初期値：タグページ
+// XMLサイトマッププライオリティ初期値：タグページ
 define('PLUGIN_SITEMAP_PLUGIN_PRIORITY_TAG', '0.5');
 
 // RecentChangesの設定
@@ -45,7 +45,7 @@ function plugin_sitemap_action() {
 	global $defaultpage;				// Top / Default page
 	global $vars;
 
-										// サイトマップキャッシュファイル
+										// XMLサイトマップキャッシュファイル
 	$cache_file = CACHE_DIR . PLUGIN_SITEMAP_FILE;
 										// ページ更新キャッシュファイル
 	$recent_file = CACHE_DIR . PKWK_MAXSHOW_CACHE;
@@ -63,8 +63,8 @@ function plugin_sitemap_action() {
 	if ( !file_exists($cache_file)  ||
 	     (file_exists($recent_file) &&
 	     (filemtime($cache_file) < filemtime($recent_file) ) ) || $forced ) {
-		// サイトマップキャッシュファイルが存在しない または
-		// ページ更新キャッシュファイルより古い場合   または
+		// XMLサイトマップキャッシュファイルが存在しない または
+		// ページ更新キャッシュファイルより古い場合  　  または
 		// 強制出力オプション指定の場合はXMLサイトマップを生成する
 		$urls = array();
 		foreach (get_existpages() as $page) {
@@ -75,10 +75,10 @@ function plugin_sitemap_action() {
 				((PLUGIN_SITEMAP_PAGE_DISALLOW  == '') ||
 				  !preg_match('/' . PLUGIN_SITEMAP_PAGE_DISALLOW . '/', $page))
 				&& check_readable($page, false, false) ) {
-				// RecentChanges ページ以外　　　　　　　　　　 かつ
-				// pukiwiki.ini設定無視ページ指定以外　　　　　 かつ
-				// サイトマップ対象ページ指定に合致するページ　 かつ
-				// サイトマップ除外ページ指定に合致しないページ かつ
+				// RecentChanges ページ以外　　　　　　　　　　　  かつ
+				// pukiwiki.ini設定無視ページ指定以外　　　　　　  かつ
+				// XMLサイトマップ対象ページ指定に合致するページ　 かつ
+				// XMLサイトマップ除外ページ指定に合致しないページ かつ
 				// 閲覧可能なページの場合は
 				// XMLサイトマップ出力URLとして編集する
 
