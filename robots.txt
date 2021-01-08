@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /wiki/?FrontPage
+Disallow: /wiki/index.php*
+Disallow: /wiki/*cmd=sitemap*
+Disallow: /wiki/*cmd=backup*
+Disallow: /wiki/*cmd=diff*
+Disallow: /wiki/*cmd=edit*
+Disallow: /wiki/*cmd=unfreeze*
+Disallow: /wiki/*cmd=freeze*
+Disallow: /wiki/*pcmd=upload*
+Disallow: /wiki/*plugin=newpage*
+Disallow: /wiki/*plugin=rename*
+Disallow: /wiki/*plugin=template*
