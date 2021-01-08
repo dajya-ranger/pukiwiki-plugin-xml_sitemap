@@ -4,7 +4,7 @@ PukiWiki用URL短縮ライブラリ対応XMLサイトマッププラグイン
 
 - 暫定公開版です（[PukiWiki1.5.2](https://pukiwiki.osdn.jp/?PukiWiki/Download/1.5.2)及び[PukiWiki1.5.3](https://pukiwiki.osdn.jp/?PukiWiki/Download/1.5.3)で動作確認済）
 - 本プラグインを利用することで、[PukiWiki用URL短縮ライブラリ](https://dajya-ranger.com/sdm_downloads/short-url-library-pkwk153/)を導入しているサイトのXMLサイトマップを出力することが可能です
-- (PukiWiki)(https://ja.wikipedia.org/wiki/PukiWiki)でXMLサイトマップを作成・送信する意味や方法について分からない方は、自サイトの記事「[PukiWiki1.5.2にXMLサイトマップとGoogleアナリティクスを組み込む！](https://dajya-ranger.com/pukiwiki/embed-xml-sitemap-google-analytics/)」を参照して下さい
+- [PukiWiki](https://ja.wikipedia.org/wiki/PukiWiki)でXMLサイトマップを作成・送信する意味や方法について分からない方は、自サイトの記事「[PukiWiki1.5.2にXMLサイトマップとGoogleアナリティクスを組み込む！](https://dajya-ranger.com/pukiwiki/embed-xml-sitemap-google-analytics/)」を参照して下さい
 - 本プラグインでは、Googleで考慮されないとされる更新頻度（changefreq）出力には対応せず、URLの優先度（priority）に関しても次の通りザックリとしか出力しません（プラグインの設定で設定値は変更可能）
 	- ルート（トップページ）URLは優先度「1.0」
 	- コンテンツページURLは一律優先度「0.8」
