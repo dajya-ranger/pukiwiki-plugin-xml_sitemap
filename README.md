@@ -9,5 +9,5 @@ PukiWiki用URL短縮ライブラリ対応XMLサイトマッププラグイン
 	- ルート（トップページ）URLは優先度「1.0」
 	- コンテンツページURLは一律優先度「0.8」
 	- [PukiWiki用SEO対応プラグイン](https://dajya-ranger.com/sdm_downloads/seo-support-plugin/)で出力するタグページURLは一律優先度「0.5」（当該プラグインを導入してタグ出力を設定している場合に設定され、未導入・未設定の場合はコンテンツページURLと同一優先度とする）
-- プラグインの設置に関しては自サイトの記事「[PukiWiki用URL短縮ライブラリ対応XMLサイトマッププラグインを導入する！](https://dajya-ranger.com/pukiwiki/xml-sitemap-plugin/)」（執筆予定）を参照して下さい
+- プラグインの設置に関しては自サイトの記事「[PukiWiki用URL短縮ライブラリ対応XMLサイトマッププラグインを導入する！](https://dajya-ranger.com/pukiwiki/xml-sitemap-plugin/)」を参照して下さい
 - [PukiWiki](https://ja.wikipedia.org/wiki/PukiWiki)サイト汎用の「robots.txt」も同梱しているので、サイトのルートディレクトリに配置して活用して下さい（トップページ名が「FrontPage」でない場合はその部分だけ書き換えてお使い下さい）
